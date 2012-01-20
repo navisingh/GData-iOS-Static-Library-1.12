@@ -9,3 +9,8 @@ How to use:
 4. To use the gdata classes, just add the following line in your header file:
 	#import "GData.h"
 5. Done
+
+========
+I added git://gist.github.com/1563325.git to the repository as it makes it easier to use this libarary with ARC projects.
+Refer to the following post on how one uses this libary.
+http://hoishing.wordpress.com/2011/08/23/gdata-objective-c-client-setup-in-xcode-4/
