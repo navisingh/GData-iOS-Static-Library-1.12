@@ -152,3 +152,17 @@
     #define STRIP_GDATA_FETCH_LOGGING 0
   #endif
 #endif
+
+#ifndef GDATA_REQUIRES_ARC
+#if defined(__clang__)
+#if __has_feature(objc_arc)
+#define GDATA_REQUIRES_ARC 1
+#endif
+#endif
+#endif
+
+#if GDATA_REQUIRES_ARC
+#define GDATA_UNSAFE_UNRETAINED __unsafe_unretained
+#else
+#define GDATA_UNSAFE_UNRETAINED
+#endif
